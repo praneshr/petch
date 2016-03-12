@@ -1,0 +1,68 @@
+{
+  "name": "Petch",
+  "version": "1.0.0",
+  "description": "A redefined news search engine.",
+  "main": "build/index.html",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/praneshr/petch.git"
+  },
+  "author": "Pranesh Ravi <talkto@praneshravi.in> (http://praneshravi.in/)",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.0",
+    "request": "^2.61.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "autoprefixer-loader": "^1.1.0",
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.0.1",
+    "babel-plugin-transform-async-to-generator": "^6.4.6",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "^6.1.2",
+    "babel-preset-es2015-node5": "^1.1.2",
+    "babel-preset-react": "^6.1.2",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-register": "^6.7.2",
+    "babel-runtime": "^6.3.19",
+    "bootstrap-sass": "^3.3.5",
+    "classnames": "^2.1.3",
+    "css-loader": "^0.9.1",
+    "events": "^1.0.2",
+    "expand-url": "^0.1.3",
+    "extract-text-webpack-plugin": "^0.3.8",
+    "file-loader": "^0.8.4",
+    "glob": "^5.0.14",
+    "jquery": "^2.1.4",
+    "jsx-loader": "^0.13.2",
+    "node-sass": "^3.4.2",
+    "page": "^1.6.3",
+    "postcss": "^5.0.19",
+    "react": "^0.13.3",
+    "react-dom": "^0.14.7",
+    "react-redux": "^4.4.0",
+    "redux-thunk": "^2.0.1",
+    "sass-loader": "^0.4.2",
+    "style-loader": "^0.8.3",
+    "timeago": "^1.4.3",
+    "webpack": "^1.12.14"
+  },
+  "bugs": {
+    "url": "https://github.com/praneshr/petch/issues"
+  },
+  "homepage": "https://github.com/praneshr/petch#readme",
+  "scripts": {
+    "build": "webpack --progress --colors",
+    "build-watch": "webpack --progress --colors",
+    "start": "node server/main.js",
+    "start-watch": "nodemon server/main.js"
+  },
+  "keywords": [
+    "petch"
+  ],
+  "engines": {
+    "node": "5.8.0"
+  }
+}
