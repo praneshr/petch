@@ -54,8 +54,8 @@
   "scripts": {
     "build": "webpack --progress --colors",
     "build-watch": "webpack --progress --colors",
-    "start": "node server/main.js",
-    "start-watch": "nodemon server/main.js"
+    "start": "node server/server.js",
+    "start-dev": "nodemon -w server server/server.js"
   },
   "keywords": [
     "petch"
