@@ -14,7 +14,7 @@ const petch = {
   browser: {
     entry: entries,
     resolve: {
-      extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx'],
+      extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx', '.scss'],
     },
     node: {
       fs: 'empty',
@@ -23,17 +23,14 @@ const petch = {
       loaders: [
         {
           test: /\html?$/,
-          exclude: /node_modules/,
           loader: 'file?name=../[name].[ext]',
         },
         {
           test: /\.scss$/,
-          exclude: /node_modules/,
-          loader: 'style!css!sass!postcss',
+          loader: ExtractTextPlugin.extract('style', 'css!sass!postcss'),
         },
         {
           test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.ico$/,
-          exclude: /node_modules/,
           loader: 'file?name=../img/[name].[ext]',
         },
         {
@@ -65,7 +62,7 @@ const petch = {
     target: 'node',
     output: {
       path: './server',
-      filename: '[name].js',
+      filename: 'server.js',
       publicPath: './server',
       libraryTarget: 'commonjs2',
     },
