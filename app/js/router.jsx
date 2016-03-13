@@ -1,30 +1,22 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
 import page from 'page'
-import Layout from './layout/layout'
+import Index from './store/index'
 
 
 const renderLayout = (context) => {
   const target = document.getElementById('app')
   React.render(
-    <Layout {...context} />,
+    <Index {...context} />,
     target
   )
 }
 
 page.base('/news')
+page('/', '/latest')
 
-page('/', (context) => {
-  renderLayout({context, render: 'index', selected: 1})
-})
-page('/today', (context) => {
-  renderLayout({context, render: 'index', selected: 1})
-})
-page('/yesterday', (context) => {
-  renderLayout({context, render: 'index', selected: 2})
-})
-page('/older', (context) => {
-  renderLayout({context, render: 'index', selected: 3})
+page('/latest', (context) => {
+  renderLayout({context, render: 'index' })
 })
 
 page({ hashbang: true })

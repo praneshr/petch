@@ -1,5 +1,6 @@
 import React from 'react'
 import cn from 'classnames'
+import $ from 'jquery'
 
 export default class tabs extends React.Component {
   static propTypes = {
@@ -15,7 +16,7 @@ export default class tabs extends React.Component {
     const selected = this.props.selected
     const headerTitles = config.map((item, i) => {
       return (
-        <div className={cn('tab', `tab-${i}`, item.title.toLowerCase(), { selected: (selected - 1) === i })} key={i}>
+        <div className={cn('tab col-md-2', `tab-${i}`, item.title.toLowerCase(), { selected: (selected - 1) === i })} key={i}>
           <a className="tab-link" href={encodeURI(`${this.props.baseUrl}/${item.title.toLowerCase()}`)}>
             {item.title}
           </a>
@@ -27,8 +28,9 @@ export default class tabs extends React.Component {
       : <div className="content-not-found">Tab body undefined</div>
     return (
       <div className="tabs">
-        <div className="tab-header">
+        <div className="row tab-header">
           {headerTitles}
+          <div className="line"></div>
         </div>
         <div className="tab-body">
           <TabBody {...this.props}/>

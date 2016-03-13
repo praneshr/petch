@@ -1,5 +1,10 @@
 @import "./vendor/bootstrap.scss";
+@import "./variables/_colors.scss";
+@import "./pages/index.scss";
 
 body{
   background-color: #fff;
+  .container{
+    width: 100%;
+  }
 }
