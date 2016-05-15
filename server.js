@@ -1,3 +1,6 @@
+
+const port = process.env.PORT || 9090
+
 import Express from 'express'
 import path from 'path'
 import request from 'request'
@@ -22,5 +25,5 @@ app.get('/api/:url', (req, res) => {
 
 
 app.listen(9090, () => {
-  console.log(`Running at ${9090}`);
+  console.log(`Running at ${port}`);
 });
