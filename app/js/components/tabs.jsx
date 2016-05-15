@@ -17,7 +17,7 @@ export default class tabs extends React.Component {
     const headerTitles = config.map((item, i) => {
       return (
         <div className={cn('tab col-md-2', `tab-${i}`, item.title.toLowerCase(), { selected: (selected - 1) === i })} key={i}>
-          <a className="tab-link" href={encodeURI(`${this.props.baseUrl}/${item.title.toLowerCase()}`)}>
+          <a className="tab-link" href={encodeURI(`${this.props.baseUrl}/${item.title.toLowerCase()}?q=${this.props.query}`)}>
             {item.title}
           </a>
         </div>

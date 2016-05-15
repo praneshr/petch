@@ -6,6 +6,10 @@ export function latest(latest) {
   return { type: actions.LATEST, latest}
 }
 
+export function searchBox(open) {
+  return { type: actions.SEARCH_BOX, open}
+}
+
 export function getLatest() {
   return (dispatch, state) => {
     $.get(`${config.host}${config.latest}`)

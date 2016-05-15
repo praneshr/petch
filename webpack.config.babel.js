@@ -8,7 +8,7 @@ const entries = [
   './app/styles/main.scss',
   './app/js/router.jsx',
 ]
-.concat(glob.sync('./app/images/*'))
+.concat(glob.sync('./app/img/*'))
 
 const petch = {
   browser: {

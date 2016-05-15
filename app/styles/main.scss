@@ -1,9 +1,13 @@
 @import "./vendor/bootstrap.scss";
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,700,300);
 @import "./variables/_colors.scss";
 @import "./pages/index.scss";
 
+@import "./components/search-box.scss";
+
 body{
   background-color: #fff;
+  font-family: 'Oxygen', sans-serif;
   .container{
     width: 100%;
   }

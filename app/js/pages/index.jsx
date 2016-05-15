@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactSlick  from 'react-slick'
 import _ from 'lodash'
+import cn from 'classnames'
 
 export default class index extends React.Component {
   static propTypes = {
@@ -47,7 +48,7 @@ export default class index extends React.Component {
       )
     })
     return (
-      <div className="petch-home">
+      <div className={cn('petch-home', { blur: this.props.store.searchBox })}>
         <div className="container">
           <div className="slider">
             <ReactSlick {...settings}>

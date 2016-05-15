@@ -4,7 +4,7 @@ import Older from '../pages/older'
 
 const tabConfig = [
   {
-    title: 'Today',
+    title: 'Latest',
     component: Today,
   },
   {

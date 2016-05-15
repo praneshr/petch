@@ -16,7 +16,11 @@ page.base('/news')
 page('/', '/latest')
 
 page('/latest', (context) => {
-  renderLayout({context, render: 'index' })
+  renderLayout({ context, render: 'index' })
+})
+
+page('/search/:scope/', (context) => {
+  renderLayout({ context, render: 'search' })
 })
 
 page({ hashbang: true })

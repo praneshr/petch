@@ -8,9 +8,18 @@ export default class index extends React.Component {
   }
 
   render() {
+    const scopeMap = {
+      latest: 1,
+      yesterday: 2,
+      older: 3,
+    }
     return (
       <div className="petch">
-        <Tabs config={config} selected={this.props.selected} baseUrl="/news"/>
+        <Tabs
+          config={config}
+          selected={scopeMap[this.props.context.params.scope.toLowerCase()]}
+          baseUrl="/news#!/search"
+          query={this.props.context.querystring.split('=')[1]}/>
       </div>
     );
   }
